@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>围龙屋 · 中国现存传统民居图鉴</title>
+<style>
+:root {
+  --primary: #8b2323;
+  --bg: #fdfbf7;
+  --bg-alt: #f6f3ec;
+  --text: #2c2c2c;
+  --text-light: #6b6b6b;
+  --border: #e5dfd3;
+  --accent: #d4a762;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC",
+               "Source Han Sans SC", system-ui, -apple-system, Segoe UI, sans-serif;
+  background: var(--bg); color: var(--text);
+  line-height: 1.85; font-size: 16px;
+  padding-top: 60px;
+}
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; height: 60px;
+  background: rgba(253,251,247,0.96);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 36px;
+}
+.navbar-brand {
+  font-weight: 700; font-size: 17px;
+  color: var(--primary); text-decoration: none; letter-spacing: 1px;
+}
+.navbar-links { display: flex; gap: 2px; list-style: none; }
+.navbar-links a {
+  color: var(--text); text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; font-size: 14px;
+  transition: all 0.15s;
+}
+.navbar-links a:hover { background: var(--bg-alt); color: var(--primary); }
+.navbar-links a.active { background: var(--primary); color: #fff; }
+.container { max-width: 880px; margin: 48px auto; padding: 0 32px; }
+article h1 {
+  font-size: 30px; margin-bottom: 20px;
+  border-bottom: 3px solid var(--primary); padding-bottom: 12px;
+  letter-spacing: 1px;
+}
+article h2 {
+  font-size: 22px; margin: 40px 0 14px;
+  color: var(--primary);
+  border-left: 4px solid var(--primary); padding-left: 12px;
+}
+article h3 { font-size: 18px; margin: 28px 0 10px; color: var(--text); }
+article p { margin-bottom: 16px; }
+article blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--bg-alt);
+  padding: 14px 20px; margin: 20px 0;
+  font-style: italic; color: var(--text-light);
+  border-radius: 0 6px 6px 0;
+}
+article blockquote p { margin: 0; }
+article ul, article ol { margin: 14px 0 14px 28px; }
+article li { margin-bottom: 5px; }
+article a { color: var(--primary); text-decoration: none; border-bottom: 1px solid transparent; }
+article a:hover { border-bottom-color: var(--primary); }
+article table {
+  width: 100%; border-collapse: collapse; margin: 20px 0;
+  font-size: 14px; background: #fff;
+  border-radius: 6px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+article th {
+  background: var(--primary); color: #fff; font-weight: 600;
+  padding: 11px 14px; text-align: left; font-size: 13px;
+}
+article td { padding: 9px 14px; border-bottom: 1px solid var(--border); }
+article tr:last-child td { border-bottom: none; }
+article tr:hover td { background: var(--bg-alt); }
+article pre {
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: 6px; padding: 16px 20px; margin: 20px 0;
+  overflow-x: auto; font-family: Consolas, Monaco, monospace;
+  font-size: 13px; line-height: 1.55;
+}
+article code {
+  background: var(--bg-alt); padding: 1px 5px; border-radius: 3px;
+  font-family: Consolas, Monaco, monospace; font-size: 13px;
+}
+article pre code { background: transparent; padding: 0; }
+.page-nav {
+  display: flex; justify-content: space-between;
+  margin-top: 44px; padding-top: 20px;
+  border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap;
+}
+.page-nav a {
+  flex: 1; min-width: 200px;
+  background: var(--bg-alt); padding: 14px 20px;
+  border-radius: 6px; text-decoration: none; color: var(--text);
+  border: 1px solid var(--border);
+  transition: all 0.15s;
+}
+.page-nav a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.page-nav .label { font-size: 12px; color: var(--text-light); display: block; margin-bottom: 4px; }
+.page-nav a:hover .label { color: rgba(255,255,255,0.8); }
+footer {
+  text-align: center; padding: 40px 32px 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-light); font-size: 13px;
+}
+footer a { color: var(--primary); }
+@media print {
+  .navbar, .page-nav, footer { display: none; }
+  body { padding: 0; }
+  .container { max-width: 100%; margin: 0; padding: 0; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar"><a href="index.html" class="navbar-brand">中国现存传统民居图鉴</a><ul class="navbar-links"><li><a href="index.html">首页</a></li><li><a href="01-dikengyuan.html">地坑院</a></li><li><a href="02-tulou.html">土楼</a></li><li><a href="03-siheyuan.html">四合院</a></li><li><a href="04-huipai.html">徽派</a></li><li><a href="05-yikeyin.html">一颗印</a></li><li><a href="06-diaojiaolou.html">吊脚楼</a></li><li><a href="07-weilongwu.html" class="active">围龙屋</a></li><li><a href="08-ayiwang.html">阿以旺</a></li></ul></nav>
+<div class="container"><article>
+<p>围龙屋俯视</p>
+<h2 id="_1">现存实例</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>年代</th>
+<th>规模</th>
+<th>特色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>璼公祠</strong></td>
+<td>明初 1368</td>
+<td>35000㎡，398 房间</td>
+<td>六横六围，<strong>广东最大围龙屋</strong>，革命秘密据点</td>
+</tr>
+<tr>
+<td><strong>仁厚温公祠</strong></td>
+<td>明弘治三年 1490</td>
+<td>400+ 房间，曾住 500 人</td>
+<td>四进三围八横，入编《中国传统民居》</td>
+</tr>
+<tr>
+<td><strong>东升围</strong></td>
+<td>南宋（700+ 年）</td>
+<td>5850㎡，190+ 房间，9 厅 18 天井</td>
+<td><strong>客家围龙屋的极致形制</strong></td>
+</tr>
+<tr>
+<td><strong>丰泰堂</strong></td>
+<td>清嘉庆七年 1802</td>
+<td>13000㎡，11 厅 213 间</td>
+<td>四堂六横三围</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">"龙"是什么？</h2>
+<p>围龙屋的名字来自其<strong>半圆形的后围</strong>：</p>
+<ul>
+<li><strong>龙</strong> = 屋后山脉的走势（风水上的龙脉）</li>
+<li><strong>围</strong> = 沿着龙脉延伸的半圆形后围龙屋</li>
+<li>整体布局：<strong>前方半月塘（蓄水） + 中间方形堂横屋 + 后方半圆形围龙</strong></li>
+<li>俯视效果：<strong>天圆地方</strong>——这是古人宇宙观的建筑表达</li>
+</ul>
+<pre><code>    半圆形围龙屋（后方）
+    ╭──────────────╮
+    │  风水林（禁伐）│
+    │  ┌────────┐  │
+    │  │ 化胎   │  │     ← 花头岃，卵石铺地
+    │  │（龙气） │  │        龙气出口，不能踩踏
+    │  ├────────┤  │
+    │  │ 上堂   │  │     ← 祠堂祭祖
+    │  │ 中堂   │  │     ← 议事、婚宴
+    │  │ 下堂   │  │     ← 门厅、禾坪
+    │  └────────┘  │
+    │  半月风水塘  │     ← 蓄水、养鱼、防火
+    ╰──────────────╯
+         ← 开阔地 →
+</code></pre>
+<h2 id="_3">标准形制解读</h2>
+<h3 id="_4">中轴线上（堂横屋）</h3>
+<table>
+<thead>
+<tr>
+<th>空间</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>上堂</strong></td>
+<td>祠堂，供奉祖先牌位，最神圣</td>
+</tr>
+<tr>
+<td><strong>中堂</strong></td>
+<td>家族议事、婚宴寿宴</td>
+</tr>
+<tr>
+<td><strong>下堂</strong></td>
+<td>门厅、接待男客、禾坪（晒谷场）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">两侧（横屋）</h3>
+<ul>
+<li><strong>东横屋</strong>：长子一家</li>
+<li><strong>西横屋</strong>：次子一家</li>
+<li>宗法秩序清晰，居住权明确</li>
+</ul>
+<h3 id="_6">后方（围龙）</h3>
+<ul>
+<li>半圆形层层后移，<strong>是家族扩展位</strong></li>
+<li>家族人口增加 → 在后方加建一层围龙</li>
+<li>仁厚温公祠三围，璼公祠<strong>六围</strong>——家族越兴旺，围数越多</li>
+</ul>
+<h3 id="_7">化胎（花头岃）</h3>
+<p>围龙与堂横屋之间的<strong>半月形空地</strong>，卵石铺地，是<strong>龙气出口</strong>——传统上禁止踩踏、禁止建房，是精神空间。</p>
+<h2 id="_8">家族逻辑</h2>
+<p>围龙屋是<strong>以建筑承载家族制度</strong>的典范：</p>
+<pre><code>祭祖 → 上堂（神圣性）
+  │
+议事 → 中堂（公共性）
+  │
+待客 → 下堂（礼仪性）
+  │
+分住 → 长子东横 / 次子西横（宗法性）
+  │
+扩展 → 后围龙逐层加建（生长性）
+  │
+精神 → 化胎花头岃（禁忌空间）
+</code></pre>
+<h2 id="_9">风水的实际功能</h2>
+<p>风水学不是迷信，它包含了一套<strong>选址与环境优化的经验法则</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>风水原则</th>
+<th>实际功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>靠山选地</strong></td>
+<td>背靠山脉可分流山洪，避免直接冲击</td>
+</tr>
+<tr>
+<td><strong>水口设置</strong></td>
+<td>在河流出口处建塔/树，减速加湿，改善微气候</td>
+</tr>
+<tr>
+<td><strong>前后有林</strong></td>
+<td>风水林 + 护林保水 + 反射夏季阳光</td>
+</tr>
+<tr>
+<td><strong>坐北朝南</strong></td>
+<td>冬季最大化利用太阳辐射，通风良好</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vs">围龙屋 vs 土楼</h2>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>客家围龙屋</th>
+<th>福建土楼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>开放性</strong></td>
+<td>开放式（有大门有围墙，正面不封死）</td>
+<td>碉堡式（<strong>完全封死</strong>，仅一个厚门）</td>
+</tr>
+<tr>
+<td><strong>生长方式</strong></td>
+<td>生长体（家族人口增加，慢慢加围层）</td>
+<td><strong>诺亚方舟</strong>（一次建成，关门守家）</td>
+</tr>
+<tr>
+<td><strong>防御性</strong></td>
+<td>次一级（围屋 + 围墙）</td>
+<td>顶级（厚墙、无窗、射孔、防火门）</td>
+</tr>
+<tr>
+<td><strong>核心功能</strong></td>
+<td>家族聚居 + 宗法秩序</td>
+<td>防御外敌 + 聚族自保</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_10">相关页面</h2>
+<ul>
+<li><a href="/">← 返回首页</a></li>
+<li><a href="/pages/diaojiaolou/">上一页：湘西吊脚楼</a></li>
+<li><a href="/pages/ayiwang/">下一页：新疆阿以旺</a></li>
+</ul>
+</article><div class="page-nav"><a href="06-diaojiaolou.html"><span class="label">← 上一页</span>吊脚楼</a><a href="08-ayiwang.html" style="text-align:right"><span class="label">下一页 →</span>阿以旺</a></div></div>
+<footer><p>Ronald G. Knapp《China's Traditional Rural Architecture》+ 2024–2026 实地资料联网采集 · AI 生成</p></footer>
+</body></html>

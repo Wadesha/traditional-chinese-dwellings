@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>阿以旺 · 中国现存传统民居图鉴</title>
+<style>
+:root {
+  --primary: #8b2323;
+  --bg: #fdfbf7;
+  --bg-alt: #f6f3ec;
+  --text: #2c2c2c;
+  --text-light: #6b6b6b;
+  --border: #e5dfd3;
+  --accent: #d4a762;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC",
+               "Source Han Sans SC", system-ui, -apple-system, Segoe UI, sans-serif;
+  background: var(--bg); color: var(--text);
+  line-height: 1.85; font-size: 16px;
+  padding-top: 60px;
+}
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; height: 60px;
+  background: rgba(253,251,247,0.96);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 36px;
+}
+.navbar-brand {
+  font-weight: 700; font-size: 17px;
+  color: var(--primary); text-decoration: none; letter-spacing: 1px;
+}
+.navbar-links { display: flex; gap: 2px; list-style: none; }
+.navbar-links a {
+  color: var(--text); text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; font-size: 14px;
+  transition: all 0.15s;
+}
+.navbar-links a:hover { background: var(--bg-alt); color: var(--primary); }
+.navbar-links a.active { background: var(--primary); color: #fff; }
+.container { max-width: 880px; margin: 48px auto; padding: 0 32px; }
+article h1 {
+  font-size: 30px; margin-bottom: 20px;
+  border-bottom: 3px solid var(--primary); padding-bottom: 12px;
+  letter-spacing: 1px;
+}
+article h2 {
+  font-size: 22px; margin: 40px 0 14px;
+  color: var(--primary);
+  border-left: 4px solid var(--primary); padding-left: 12px;
+}
+article h3 { font-size: 18px; margin: 28px 0 10px; color: var(--text); }
+article p { margin-bottom: 16px; }
+article blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--bg-alt);
+  padding: 14px 20px; margin: 20px 0;
+  font-style: italic; color: var(--text-light);
+  border-radius: 0 6px 6px 0;
+}
+article blockquote p { margin: 0; }
+article ul, article ol { margin: 14px 0 14px 28px; }
+article li { margin-bottom: 5px; }
+article a { color: var(--primary); text-decoration: none; border-bottom: 1px solid transparent; }
+article a:hover { border-bottom-color: var(--primary); }
+article table {
+  width: 100%; border-collapse: collapse; margin: 20px 0;
+  font-size: 14px; background: #fff;
+  border-radius: 6px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+article th {
+  background: var(--primary); color: #fff; font-weight: 600;
+  padding: 11px 14px; text-align: left; font-size: 13px;
+}
+article td { padding: 9px 14px; border-bottom: 1px solid var(--border); }
+article tr:last-child td { border-bottom: none; }
+article tr:hover td { background: var(--bg-alt); }
+article pre {
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: 6px; padding: 16px 20px; margin: 20px 0;
+  overflow-x: auto; font-family: Consolas, Monaco, monospace;
+  font-size: 13px; line-height: 1.55;
+}
+article code {
+  background: var(--bg-alt); padding: 1px 5px; border-radius: 3px;
+  font-family: Consolas, Monaco, monospace; font-size: 13px;
+}
+article pre code { background: transparent; padding: 0; }
+.page-nav {
+  display: flex; justify-content: space-between;
+  margin-top: 44px; padding-top: 20px;
+  border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap;
+}
+.page-nav a {
+  flex: 1; min-width: 200px;
+  background: var(--bg-alt); padding: 14px 20px;
+  border-radius: 6px; text-decoration: none; color: var(--text);
+  border: 1px solid var(--border);
+  transition: all 0.15s;
+}
+.page-nav a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.page-nav .label { font-size: 12px; color: var(--text-light); display: block; margin-bottom: 4px; }
+.page-nav a:hover .label { color: rgba(255,255,255,0.8); }
+footer {
+  text-align: center; padding: 40px 32px 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-light); font-size: 13px;
+}
+footer a { color: var(--primary); }
+@media print {
+  .navbar, .page-nav, footer { display: none; }
+  body { padding: 0; }
+  .container { max-width: 100%; margin: 0; padding: 0; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar"><a href="index.html" class="navbar-brand">中国现存传统民居图鉴</a><ul class="navbar-links"><li><a href="index.html">首页</a></li><li><a href="01-dikengyuan.html">地坑院</a></li><li><a href="02-tulou.html">土楼</a></li><li><a href="03-siheyuan.html">四合院</a></li><li><a href="04-huipai.html">徽派</a></li><li><a href="05-yikeyin.html">一颗印</a></li><li><a href="06-diaojiaolou.html">吊脚楼</a></li><li><a href="07-weilongwu.html">围龙屋</a></li><li><a href="08-ayiwang.html" class="active">阿以旺</a></li></ul></nav>
+<div class="container"><article>
+<p>喀什高台民居鸟瞰</p>
+<h2 id="_1">现存实例</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>位置</th>
+<th>年代</th>
+<th>规模</th>
+<th>特色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>阔孜其亚贝希巷</strong></td>
+<td>喀什高台民居</td>
+<td>东汉（2000+ 年）</td>
+<td>603 户，2400 人</td>
+<td>40 米黄土高崖，6–7 层高，50+ 迷宫小巷，最窄 1.5m</td>
+</tr>
+<tr>
+<td><strong>艾提尕尔清真寺周边</strong></td>
+<td>喀什</td>
+<td>明—清</td>
+<td>连片生土群</td>
+<td>伊斯兰宗教核心区，传统民居连片保存</td>
+</tr>
+<tr>
+<td><strong>普恰克其乡</strong></td>
+<td>和田墨玉县</td>
+<td>清—民国</td>
+<td>成片</td>
+<td>2011 年<strong>国家级非物质文化遗产</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>东汉班超曾在阔孜其亚贝希巷一带驻守——这是中国最古老的、<strong>至今仍在居住的生土聚落</strong>。</p>
+</blockquote>
+<h2 id="_2">极端气候倒逼的奇迹</h2>
+<p>新疆塔里木盆地是中国最恶劣的居住环境之一：</p>
+<table>
+<thead>
+<tr>
+<th>气候要素</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>年降水</strong></td>
+<td>30–60mm</td>
+</tr>
+<tr>
+<td><strong>年蒸发量</strong></td>
+<td>2000–3000mm（<strong>7 倍于降水</strong>）</td>
+</tr>
+<tr>
+<td><strong>昼夜温差</strong></td>
+<td>可达 30°C（白天 40°C → 夜晚 10°C）</td>
+</tr>
+<tr>
+<td><strong>沙漠风暴</strong></td>
+<td>每年 30+ 天</td>
+</tr>
+<tr>
+<td><strong>木材资源</strong></td>
+<td>几乎为零（塔里木河边的胡杨受保护）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论：只能用土。</strong> 阿以旺就是这种极端约束下的最优解。</p>
+<h2 id="_3">喀什高台民居 —— 崖上迷宫</h2>
+<p>阔孜其亚贝希巷建在 40 米高的黄土崖上，层层叠叠形成立体聚落：</p>
+<pre><code>        ┌─────────────┐
+        │  崖上 3 层   │  ← 家族世代加盖
+        │  （7 层=7 代）│
+        ├─────────────┤
+        │  崖下 4 层   │
+        ├─────────────┤
+        │  40 米黄土崖 │
+        └─────────────┘
+</code></pre>
+<h3 id="_4">五个关键设计</h3>
+<table>
+<thead>
+<tr>
+<th>设计</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>40 米崖上选址</strong></td>
+<td>避洪水 + 天然防御 + 节约平地</td>
+</tr>
+<tr>
+<td><strong>50+ 迷宫小巷</strong></td>
+<td>减速风沙 + 防盗（外人迷路）+ 遮阳</td>
+</tr>
+<tr>
+<td><strong>过街楼</strong></td>
+<td>分家时二楼跨街相连——<strong>断土不断亲</strong></td>
+</tr>
+<tr>
+<td><strong>外壁无窗</strong></td>
+<td>挡沙 + 隔绝强烈太阳辐射</td>
+</tr>
+<tr>
+<td><strong>厚生土墙</strong></td>
+<td>墙厚 50–60cm，热工性能极强</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">阿以旺厅 —— 从露天到天窗</h2>
+<p>阿以旺（Aywang）的演变本身就是一部气候适应史：</p>
+<pre><code>早期（原始）     中期（风沙加剧）      成熟期（今日）
+┌─────────┐     ┌─────────┐         ┌─────┬─────┐
+│         │     │  加天窗   │         │ 天窗 │ 天窗 │ ← 高于屋顶
+│ 露天庭院 │ ──▶ │（高 50cm）│   ──▶   │↑50cm│     │
+│         │     │         │         ├─────┴─────┤
+└─────────┘     └─────────┘         │   阿以旺厅   │
+  问题：风沙     解决：采光通风         │ （核心空间） │
+  直接吹入       但仍有沙               └───────────┘
+</code></pre>
+<h3 id="_6">阿以旺厅功能布局</h3>
+<pre><code>        天窗（上方）
+         │
+    ┌────┴────┐
+    │         │
+夏居室（13–15㎡，开敞）── 阿以旺厅（活动核心）── 冬居室（仅 9㎡，封闭）
+    │         │
+储屋 ◄───────┴──────► 餐室
+</code></pre>
+<ul>
+<li><strong>夏居室</strong>：面积大、开敞，利用通风降温</li>
+<li><strong>冬居室</strong>：仅 9㎡，紧凑封闭，利用生土热惰性保温</li>
+<li>阿以旺厅是<strong>家庭一切活动的中心</strong></li>
+</ul>
+<h2 id="_7">生土热工奇迹</h2>
+<p>这是阿以旺最震撼的地方——<strong>完全不烧暖气、不开空调，室内始终 18–26°C</strong>：</p>
+<h3 id="_8">物理原理</h3>
+<pre><code>白天（室外 40°C）：
+  → 太阳辐射加热室外空气
+  → 厚土墙（50–60cm，生土比热容 1.3 kJ/kg·°C）吸热
+  → 室内保持 22°C
+
+夜晚（室外 10°C）：
+  → 土墙缓慢释放白天储存的热量
+  → 室内保持 ≥15°C
+</code></pre>
+<h3 id="_9">现代对比</h3>
+<table>
+<thead>
+<tr>
+<th>建筑类型</th>
+<th>冬季室内</th>
+<th>夏季室内</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>传统阿以旺</strong></td>
+<td>≥15°C（无需暖气）</td>
+<td>22°C（无需空调）</td>
+</tr>
+<tr>
+<td>现代砖房（无保温）</td>
+<td>−10°C（需厚棉衣）</td>
+<td>45°C（蒸笼）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>墙内掺<strong>麦草</strong>（类似钢筋），防止生土开裂——这又是一套"古代钢筋混凝土"。</p>
+</blockquote>
+<h2 id="_10">烟囱效应自然通风</h2>
+<pre><code>        天窗（高 50–100cm）
+          ↑ 热空气上升排出
+    ┌─────┴─────┐
+    │           │
+    │  阿以旺厅  │     ← 太阳辐射加热天井空气
+    │           │       空气变轻上升
+    └─────┬─────┘
+          ↓
+  生土外墙底部小窗
+  新鲜冷空气流入
+</code></pre>
+<p>天窗高于四周屋顶 50–100cm，高侧窗开在顶部——<strong>热空气上升刚好从这里排出</strong>，而冷空气从底部小窗进入，完全不需要机械通风。</p>
+<h2 id="_11">吐鲁番变体</h2>
+<p>吐鲁番年降水仅 <strong>10mm</strong>，比喀什还要极端，阿以旺又演化出独特版本：</p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>喀什</th>
+<th>吐鲁番</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地坪标高</td>
+<td>与室外平</td>
+<td><strong>比室外低 30cm</strong>（利用地下凉意）</td>
+</tr>
+<tr>
+<td>侧窗</td>
+<td>少量</td>
+<td><strong>极少甚至没有</strong></td>
+</tr>
+<tr>
+<td>天窗</td>
+<td>主要光源</td>
+<td><strong>唯一光源</strong></td>
+</tr>
+<tr>
+<td>遮阳</td>
+<td>自身厚墙</td>
+<td><strong>葡萄架</strong>（藤架覆盖院落）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_12">现代启示 —— 好传统可以直接升级</h2>
+<p>2026 年喀什经济特区建设中，阿以旺迎来了最意外的新生：</p>
+<pre><code>传统生土墙 + 天窗 + 烟囱效应（被动降温 20°C）
+          +
+内部水电卫浴改造
+          ↓
+&quot;阿以旺精品民宿&quot;——**一夜 600 元起**，旺季一房难求
+</code></pre>
+<blockquote>
+<p>这不是"保存一个古迹"，而是<strong>直接把 2000 年前的智慧升级为 2026 年的高端产品</strong>。好的传统，不需要博物馆——它可以直接活在当下。</p>
+</blockquote>
+<h2 id="_13">相关页面</h2>
+<ul>
+<li><a href="/">← 返回首页</a></li>
+<li><a href="/pages/weilongwu/">上一页：客家围龙屋</a></li>
+<li><a href="/#gallery">下一页：返回目录</a></li>
+</ul>
+</article><div class="page-nav"><a href="07-weilongwu.html"><span class="label">← 上一页</span>围龙屋</a></div></div>
+<footer><p>Ronald G. Knapp《China's Traditional Rural Architecture》+ 2024–2026 实地资料联网采集 · AI 生成</p></footer>
+</body></html>

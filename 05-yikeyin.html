@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>一颗印 · 中国现存传统民居图鉴</title>
+<style>
+:root {
+  --primary: #8b2323;
+  --bg: #fdfbf7;
+  --bg-alt: #f6f3ec;
+  --text: #2c2c2c;
+  --text-light: #6b6b6b;
+  --border: #e5dfd3;
+  --accent: #d4a762;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC",
+               "Source Han Sans SC", system-ui, -apple-system, Segoe UI, sans-serif;
+  background: var(--bg); color: var(--text);
+  line-height: 1.85; font-size: 16px;
+  padding-top: 60px;
+}
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; height: 60px;
+  background: rgba(253,251,247,0.96);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 36px;
+}
+.navbar-brand {
+  font-weight: 700; font-size: 17px;
+  color: var(--primary); text-decoration: none; letter-spacing: 1px;
+}
+.navbar-links { display: flex; gap: 2px; list-style: none; }
+.navbar-links a {
+  color: var(--text); text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; font-size: 14px;
+  transition: all 0.15s;
+}
+.navbar-links a:hover { background: var(--bg-alt); color: var(--primary); }
+.navbar-links a.active { background: var(--primary); color: #fff; }
+.container { max-width: 880px; margin: 48px auto; padding: 0 32px; }
+article h1 {
+  font-size: 30px; margin-bottom: 20px;
+  border-bottom: 3px solid var(--primary); padding-bottom: 12px;
+  letter-spacing: 1px;
+}
+article h2 {
+  font-size: 22px; margin: 40px 0 14px;
+  color: var(--primary);
+  border-left: 4px solid var(--primary); padding-left: 12px;
+}
+article h3 { font-size: 18px; margin: 28px 0 10px; color: var(--text); }
+article p { margin-bottom: 16px; }
+article blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--bg-alt);
+  padding: 14px 20px; margin: 20px 0;
+  font-style: italic; color: var(--text-light);
+  border-radius: 0 6px 6px 0;
+}
+article blockquote p { margin: 0; }
+article ul, article ol { margin: 14px 0 14px 28px; }
+article li { margin-bottom: 5px; }
+article a { color: var(--primary); text-decoration: none; border-bottom: 1px solid transparent; }
+article a:hover { border-bottom-color: var(--primary); }
+article table {
+  width: 100%; border-collapse: collapse; margin: 20px 0;
+  font-size: 14px; background: #fff;
+  border-radius: 6px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+article th {
+  background: var(--primary); color: #fff; font-weight: 600;
+  padding: 11px 14px; text-align: left; font-size: 13px;
+}
+article td { padding: 9px 14px; border-bottom: 1px solid var(--border); }
+article tr:last-child td { border-bottom: none; }
+article tr:hover td { background: var(--bg-alt); }
+article pre {
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: 6px; padding: 16px 20px; margin: 20px 0;
+  overflow-x: auto; font-family: Consolas, Monaco, monospace;
+  font-size: 13px; line-height: 1.55;
+}
+article code {
+  background: var(--bg-alt); padding: 1px 5px; border-radius: 3px;
+  font-family: Consolas, Monaco, monospace; font-size: 13px;
+}
+article pre code { background: transparent; padding: 0; }
+.page-nav {
+  display: flex; justify-content: space-between;
+  margin-top: 44px; padding-top: 20px;
+  border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap;
+}
+.page-nav a {
+  flex: 1; min-width: 200px;
+  background: var(--bg-alt); padding: 14px 20px;
+  border-radius: 6px; text-decoration: none; color: var(--text);
+  border: 1px solid var(--border);
+  transition: all 0.15s;
+}
+.page-nav a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.page-nav .label { font-size: 12px; color: var(--text-light); display: block; margin-bottom: 4px; }
+.page-nav a:hover .label { color: rgba(255,255,255,0.8); }
+footer {
+  text-align: center; padding: 40px 32px 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-light); font-size: 13px;
+}
+footer a { color: var(--primary); }
+@media print {
+  .navbar, .page-nav, footer { display: none; }
+  body { padding: 0; }
+  .container { max-width: 100%; margin: 0; padding: 0; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar"><a href="index.html" class="navbar-brand">中国现存传统民居图鉴</a><ul class="navbar-links"><li><a href="index.html">首页</a></li><li><a href="01-dikengyuan.html">地坑院</a></li><li><a href="02-tulou.html">土楼</a></li><li><a href="03-siheyuan.html">四合院</a></li><li><a href="04-huipai.html">徽派</a></li><li><a href="05-yikeyin.html" class="active">一颗印</a></li><li><a href="06-diaojiaolou.html">吊脚楼</a></li><li><a href="07-weilongwu.html">围龙屋</a></li><li><a href="08-ayiwang.html">阿以旺</a></li></ul></nav>
+<div class="container"><article>
+<p>一颗印平面示意图</p>
+<h2 id="_1">现存实例</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>位置</th>
+<th>年代</th>
+<th>规模</th>
+<th>特色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>萧家"七十二道门"</td>
+<td>昆明呈贡海晏村</td>
+<td>清中期</td>
+<td>2440㎡，3 所组合</td>
+<td>规模最大的一颗印建筑群</td>
+</tr>
+<tr>
+<td>万溪冲村</td>
+<td>昆明呈贡</td>
+<td>600+ 年</td>
+<td>村落级</td>
+<td>营造学社<strong>刘致平 1938 年测绘原型</strong></td>
+</tr>
+<tr>
+<td>殷家村老居委会</td>
+<td>昆明</td>
+<td>民国</td>
+<td>—</td>
+<td>省级文物保护单位</td>
+</tr>
+<tr>
+<td>张天虚故居</td>
+<td>昆明</td>
+<td>1890</td>
+<td>193㎡</td>
+<td>前铺后院一颗印</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>"一颗印"这个名字，正是<strong>营造学社刘致平先生 1938 年</strong>在昆明测绘时命名的——因其平面方正如印章。</p>
+</blockquote>
+<h2 id="_2">"三间四耳倒八尺"</h2>
+<p>这是昆明工匠的祖传口诀，精确描述了一颗印的标准形制：</p>
+<pre><code>        ┌───────────┐
+        │  倒座（8尺） │  ← 进深仅 8 尺（约 2.4m）
+        ├─┬─────┬─┤
+        │ │     │ │
+        │ │ 天井 │ │     ← 方小天井 3m × 3m
+        │ │ 3×3m │ │
+        │ ├─────┤ │
+        │ │ 正房 │ │     ← 三间面宽 12m，进深较大
+        │ │ 三间  │ │
+        └─┴─────┴─┘
+       左耳房    右耳房
+      （各两间）（各两间）
+</code></pre>
+<ul>
+<li><strong>三间</strong>：正房面阔三间，总宽约 12m</li>
+<li><strong>四耳</strong>：左右各两间耳房，共四间</li>
+<li><strong>倒八尺</strong>：倒座进深仅八尺（约 2.4m），是压缩出来的</li>
+<li><strong>小天井 3×3m</strong>：方寸之间，通风采光排水</li>
+</ul>
+<h2 id="_3">高原气候应对</h2>
+<p>昆明海拔约 1900m，年均温 15°C，<strong>年日照 2500+ 小时</strong>，昼夜温差可达 30°C——一颗印精准回应：</p>
+<table>
+<thead>
+<tr>
+<th>高原挑战</th>
+<th>一颗印对策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>强日照</strong></td>
+<td>窄天井 + 深腰檐（大小厦）遮阳，天井终日不被直射</td>
+</tr>
+<tr>
+<td><strong>昼夜温差 30°C</strong></td>
+<td>厚土坯墙 <strong>50–70cm</strong>，巨大热惰性缓冲温度波动</td>
+</tr>
+<tr>
+<td><strong>年均温 15°C</strong></td>
+<td>无固定朝向，可依山势灵活布置</td>
+</tr>
+<tr>
+<td><strong>平地稀少</strong></td>
+<td>二层紧凑布局，竖向发展</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">大小厦烟囱效应 —— 高原自然空调</h2>
+<pre><code>    正房腰檐（大厦，出檐 80cm）
+      │
+      │   ← 太阳加热天井空气
+      │     热空气变轻上升
+      ▼
+    ┌─┴───┴─┐
+    │  天 井  │     ← 3m×3m，热空气从上方排出
+    └─┬───┬─┘
+      │   │
+    耳房腰檐（小厦，出檐 40cm）
+
+结果：夏季室外 30°C → 天井内 22°C
+</code></pre>
+<h2 id="_5">高低台基三高差</h2>
+<p>一颗印用<strong>四级台基</strong>体现礼制 + 解决排水 + 创造自然台阶：</p>
+<pre><code>        正房   +1.20m（最尊贵）
+    ┌────┴────┐
+    │ 耳房 +0.75m │
+    ├───────────┤
+    │ 倒座 +0.30m │
+    ├───────────┤
+    │ 天井  ±0.00m │  ← 最低点，四面排水汇聚
+    └───────────┘
+</code></pre>
+<ol>
+<li><strong>天井最低</strong>：雨水自然汇集排出</li>
+<li><strong>倒座 +30cm</strong>：比院落高，防雨水倒灌</li>
+<li><strong>耳房 +75cm</strong>：稍高</li>
+<li><strong>正房 +120cm</strong>：最尊贵，视野最好</li>
+</ol>
+<blockquote>
+<p>这不仅仅是空间秩序，也是一套<strong>被动排水系统</strong>。</p>
+</blockquote>
+<h2 id="_6">抗震奇迹</h2>
+<p>一颗印采用<strong>穿斗木架 + 厚土墙</strong>的弹性组合：</p>
+<ul>
+<li>穿斗式木构架不依赖榫卯紧密咬合，地震时可<strong>微动耗能</strong></li>
+<li>厚土墙（50–70cm）提供侧向刚度</li>
+<li>1996 年丽江 7.0 级地震，昆明周边一颗印民居<strong>屹立不倒</strong></li>
+</ul>
+<h2 id="_7">相关页面</h2>
+<ul>
+<li><a href="/">← 返回首页</a></li>
+<li><a href="/pages/huipai/">上一页：皖南徽派</a></li>
+<li><a href="/pages/diaojiaolou/">下一页：湘西吊脚楼</a></li>
+</ul>
+</article><div class="page-nav"><a href="04-huipai.html"><span class="label">← 上一页</span>徽派</a><a href="06-diaojiaolou.html" style="text-align:right"><span class="label">下一页 →</span>吊脚楼</a></div></div>
+<footer><p>Ronald G. Knapp《China's Traditional Rural Architecture》+ 2024–2026 实地资料联网采集 · AI 生成</p></footer>
+</body></html>

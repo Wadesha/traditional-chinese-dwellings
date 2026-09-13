@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>徽派 · 中国现存传统民居图鉴</title>
+<style>
+:root {
+  --primary: #8b2323;
+  --bg: #fdfbf7;
+  --bg-alt: #f6f3ec;
+  --text: #2c2c2c;
+  --text-light: #6b6b6b;
+  --border: #e5dfd3;
+  --accent: #d4a762;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC",
+               "Source Han Sans SC", system-ui, -apple-system, Segoe UI, sans-serif;
+  background: var(--bg); color: var(--text);
+  line-height: 1.85; font-size: 16px;
+  padding-top: 60px;
+}
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; height: 60px;
+  background: rgba(253,251,247,0.96);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 36px;
+}
+.navbar-brand {
+  font-weight: 700; font-size: 17px;
+  color: var(--primary); text-decoration: none; letter-spacing: 1px;
+}
+.navbar-links { display: flex; gap: 2px; list-style: none; }
+.navbar-links a {
+  color: var(--text); text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; font-size: 14px;
+  transition: all 0.15s;
+}
+.navbar-links a:hover { background: var(--bg-alt); color: var(--primary); }
+.navbar-links a.active { background: var(--primary); color: #fff; }
+.container { max-width: 880px; margin: 48px auto; padding: 0 32px; }
+article h1 {
+  font-size: 30px; margin-bottom: 20px;
+  border-bottom: 3px solid var(--primary); padding-bottom: 12px;
+  letter-spacing: 1px;
+}
+article h2 {
+  font-size: 22px; margin: 40px 0 14px;
+  color: var(--primary);
+  border-left: 4px solid var(--primary); padding-left: 12px;
+}
+article h3 { font-size: 18px; margin: 28px 0 10px; color: var(--text); }
+article p { margin-bottom: 16px; }
+article blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--bg-alt);
+  padding: 14px 20px; margin: 20px 0;
+  font-style: italic; color: var(--text-light);
+  border-radius: 0 6px 6px 0;
+}
+article blockquote p { margin: 0; }
+article ul, article ol { margin: 14px 0 14px 28px; }
+article li { margin-bottom: 5px; }
+article a { color: var(--primary); text-decoration: none; border-bottom: 1px solid transparent; }
+article a:hover { border-bottom-color: var(--primary); }
+article table {
+  width: 100%; border-collapse: collapse; margin: 20px 0;
+  font-size: 14px; background: #fff;
+  border-radius: 6px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+article th {
+  background: var(--primary); color: #fff; font-weight: 600;
+  padding: 11px 14px; text-align: left; font-size: 13px;
+}
+article td { padding: 9px 14px; border-bottom: 1px solid var(--border); }
+article tr:last-child td { border-bottom: none; }
+article tr:hover td { background: var(--bg-alt); }
+article pre {
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: 6px; padding: 16px 20px; margin: 20px 0;
+  overflow-x: auto; font-family: Consolas, Monaco, monospace;
+  font-size: 13px; line-height: 1.55;
+}
+article code {
+  background: var(--bg-alt); padding: 1px 5px; border-radius: 3px;
+  font-family: Consolas, Monaco, monospace; font-size: 13px;
+}
+article pre code { background: transparent; padding: 0; }
+.page-nav {
+  display: flex; justify-content: space-between;
+  margin-top: 44px; padding-top: 20px;
+  border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap;
+}
+.page-nav a {
+  flex: 1; min-width: 200px;
+  background: var(--bg-alt); padding: 14px 20px;
+  border-radius: 6px; text-decoration: none; color: var(--text);
+  border: 1px solid var(--border);
+  transition: all 0.15s;
+}
+.page-nav a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.page-nav .label { font-size: 12px; color: var(--text-light); display: block; margin-bottom: 4px; }
+.page-nav a:hover .label { color: rgba(255,255,255,0.8); }
+footer {
+  text-align: center; padding: 40px 32px 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-light); font-size: 13px;
+}
+footer a { color: var(--primary); }
+@media print {
+  .navbar, .page-nav, footer { display: none; }
+  body { padding: 0; }
+  .container { max-width: 100%; margin: 0; padding: 0; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar"><a href="index.html" class="navbar-brand">中国现存传统民居图鉴</a><ul class="navbar-links"><li><a href="index.html">首页</a></li><li><a href="01-dikengyuan.html">地坑院</a></li><li><a href="02-tulou.html">土楼</a></li><li><a href="03-siheyuan.html">四合院</a></li><li><a href="04-huipai.html" class="active">徽派</a></li><li><a href="05-yikeyin.html">一颗印</a></li><li><a href="06-diaojiaolou.html">吊脚楼</a></li><li><a href="07-weilongwu.html">围龙屋</a></li><li><a href="08-ayiwang.html">阿以旺</a></li></ul></nav>
+<div class="container"><article>
+<p>西递村景</p>
+<h2 id="_1">现存实例</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>始建</th>
+<th>世界遗产</th>
+<th>关键数据</th>
+<th>特色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>西递</strong></td>
+<td>北宋</td>
+<td>✅</td>
+<td>224 幢明清建筑</td>
+<td>船形平面，"桃花源里人家"</td>
+</tr>
+<tr>
+<td><strong>宏村</strong></td>
+<td>南宋</td>
+<td>✅</td>
+<td>137 幢明清建筑</td>
+<td>"牛形水系" + 承志堂</td>
+</tr>
+<tr>
+<td>太极湖村</td>
+<td>南宋</td>
+<td>—</td>
+<td>800 年历史</td>
+<td>"中华门楼第一村"，单块砖雕 4.2㎡</td>
+</tr>
+<tr>
+<td>棠樾村</td>
+<td>明</td>
+<td>—</td>
+<td>7 座牌坊群</td>
+<td>鲍氏家族 400 年忠孝节义</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">为什么这样设计？</h2>
+<p>徽派建筑是<strong>气候 + 地形 + 经济 + 文化</strong>共同塑造的结果：</p>
+<table>
+<thead>
+<tr>
+<th>驱动因素</th>
+<th>条件</th>
+<th>建筑回应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>气候</strong></td>
+<td>亚热带季风，1400–1700mm 降水</td>
+<td>深出檐、小青瓦、天井院排水</td>
+</tr>
+<tr>
+<td><strong>地形</strong></td>
+<td>多山，平地仅占 10%</td>
+<td>高密度、依山就势、层层叠落</td>
+</tr>
+<tr>
+<td><strong>徽商</strong></td>
+<td>垄断盐茶木，明清首富</td>
+<td>回家建宅院、祠堂、牌坊（炫耀性消费）</td>
+</tr>
+<tr>
+<td><strong>理学</strong></td>
+<td>朱熹"存天理"</td>
+<td>外观朴素（白墙黛瓦）、内部华美（三雕），<strong>家富不外露</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>"<strong>粉墙黛瓦，外简内华</strong>"——这就是理学在建筑上的投射。</p>
+</blockquote>
+<h2 id="_3">宏村牛形水系</h2>
+<p>宏村水系是古代水利工程的杰作，<strong>800 年来仍在精准运行</strong>：</p>
+<pre><code>西溪河
+  │
+  ▼
+拦河坝（抬高水位）
+  │
+  ▼
+水圳 1200m 九曲十弯（流速 21m/分钟）
+  │
+  ▼
+月沼（&quot;牛胃&quot;，核心公共空间）
+  │
+  ▼
+每家支管（消防、洗涤）
+  │
+  ▼
+南湖（&quot;牛肚&quot;，1607 年建百亩人工湖）
+</code></pre>
+<p>2024 年梅雨季，宏村累计降水 <strong>543mm</strong>，牛形水系正常运行，村落<strong>零内涝</strong>。</p>
+<h2 id="_4">马头墙的三重用意</h2>
+<pre><code>      ┌───┐
+      │   │  ← 防火墙（比屋顶高 30–50cm）
+      │   │
+┌─────┤   ├─────┐
+│     │   │     │    ← 可站人瞭望
+│ 瓦  │ 瓦 │ 瓦 │
+└─────┴───┴─────┘
+   风水象征：步步高升（官运亨通）
+</code></pre>
+<ol>
+<li><strong>防火墙</strong>：邻里失火时阻断火焰蔓延</li>
+<li><strong>风水</strong>：阶梯状象征<strong>步步高升</strong>，回应徽商"学而优则仕"的追求</li>
+<li><strong>防御</strong>：墙顶可站人瞭望</li>
+</ol>
+<h2 id="_5">三雕艺术</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>位置</th>
+<th>代表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>砖雕</strong></td>
+<td>门楼、照壁</td>
+<td>太极湖村单块 4.2㎡，分层透雕</td>
+</tr>
+<tr>
+<td><strong>石雕</strong></td>
+<td>柱础、牌坊</td>
+<td>棠樾牌坊群，整石镂空</td>
+</tr>
+<tr>
+<td><strong>木雕</strong></td>
+<td>梁架、隔扇</td>
+<td>承志堂：20 工匠 + 4 年 + 耗金 100 两</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>承志堂木雕中的人物，<strong>每张脸朝向不同方向，表情各异</strong>——这是徽派工艺的巅峰。</p>
+</blockquote>
+<h2 id="_6">天井烟囱效应</h2>
+<p>徽派天井不只是采光，它是一套<strong>被动式自然空调</strong>：</p>
+<pre><code>     热空气上升排出
+         ↑
+    ┌────┴────┐
+    │  天 井   │  ← 太阳辐射加热天井空气
+    │ （高 3–6m）│
+    └────┬────┘
+         ↓
+    房间内形成负压
+         ↓
+    新鲜空气从门洞窗流入
+</code></pre>
+<ul>
+<li>夏季：天井内温度比室外低 3–5°C</li>
+<li>冬季：关闭部分门窗，天井仍可引入阳光</li>
+</ul>
+<h2 id="_7">相关页面</h2>
+<ul>
+<li><a href="/">← 返回首页</a></li>
+<li><a href="/pages/siheyuan/">上一页：北京四合院</a></li>
+<li><a href="/pages/yikeyin/">下一页：云南一颗印</a></li>
+</ul>
+</article><div class="page-nav"><a href="03-siheyuan.html"><span class="label">← 上一页</span>四合院</a><a href="05-yikeyin.html" style="text-align:right"><span class="label">下一页 →</span>一颗印</a></div></div>
+<footer><p>Ronald G. Knapp《China's Traditional Rural Architecture》+ 2024–2026 实地资料联网采集 · AI 生成</p></footer>
+</body></html>

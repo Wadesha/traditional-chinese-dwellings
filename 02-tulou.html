@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>土楼 · 中国现存传统民居图鉴</title>
+<style>
+:root {
+  --primary: #8b2323;
+  --bg: #fdfbf7;
+  --bg-alt: #f6f3ec;
+  --text: #2c2c2c;
+  --text-light: #6b6b6b;
+  --border: #e5dfd3;
+  --accent: #d4a762;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC",
+               "Source Han Sans SC", system-ui, -apple-system, Segoe UI, sans-serif;
+  background: var(--bg); color: var(--text);
+  line-height: 1.85; font-size: 16px;
+  padding-top: 60px;
+}
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; height: 60px;
+  background: rgba(253,251,247,0.96);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 36px;
+}
+.navbar-brand {
+  font-weight: 700; font-size: 17px;
+  color: var(--primary); text-decoration: none; letter-spacing: 1px;
+}
+.navbar-links { display: flex; gap: 2px; list-style: none; }
+.navbar-links a {
+  color: var(--text); text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; font-size: 14px;
+  transition: all 0.15s;
+}
+.navbar-links a:hover { background: var(--bg-alt); color: var(--primary); }
+.navbar-links a.active { background: var(--primary); color: #fff; }
+.container { max-width: 880px; margin: 48px auto; padding: 0 32px; }
+article h1 {
+  font-size: 30px; margin-bottom: 20px;
+  border-bottom: 3px solid var(--primary); padding-bottom: 12px;
+  letter-spacing: 1px;
+}
+article h2 {
+  font-size: 22px; margin: 40px 0 14px;
+  color: var(--primary);
+  border-left: 4px solid var(--primary); padding-left: 12px;
+}
+article h3 { font-size: 18px; margin: 28px 0 10px; color: var(--text); }
+article p { margin-bottom: 16px; }
+article blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--bg-alt);
+  padding: 14px 20px; margin: 20px 0;
+  font-style: italic; color: var(--text-light);
+  border-radius: 0 6px 6px 0;
+}
+article blockquote p { margin: 0; }
+article ul, article ol { margin: 14px 0 14px 28px; }
+article li { margin-bottom: 5px; }
+article a { color: var(--primary); text-decoration: none; border-bottom: 1px solid transparent; }
+article a:hover { border-bottom-color: var(--primary); }
+article table {
+  width: 100%; border-collapse: collapse; margin: 20px 0;
+  font-size: 14px; background: #fff;
+  border-radius: 6px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+article th {
+  background: var(--primary); color: #fff; font-weight: 600;
+  padding: 11px 14px; text-align: left; font-size: 13px;
+}
+article td { padding: 9px 14px; border-bottom: 1px solid var(--border); }
+article tr:last-child td { border-bottom: none; }
+article tr:hover td { background: var(--bg-alt); }
+article pre {
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: 6px; padding: 16px 20px; margin: 20px 0;
+  overflow-x: auto; font-family: Consolas, Monaco, monospace;
+  font-size: 13px; line-height: 1.55;
+}
+article code {
+  background: var(--bg-alt); padding: 1px 5px; border-radius: 3px;
+  font-family: Consolas, Monaco, monospace; font-size: 13px;
+}
+article pre code { background: transparent; padding: 0; }
+.page-nav {
+  display: flex; justify-content: space-between;
+  margin-top: 44px; padding-top: 20px;
+  border-top: 1px solid var(--border); gap: 12px; flex-wrap: wrap;
+}
+.page-nav a {
+  flex: 1; min-width: 200px;
+  background: var(--bg-alt); padding: 14px 20px;
+  border-radius: 6px; text-decoration: none; color: var(--text);
+  border: 1px solid var(--border);
+  transition: all 0.15s;
+}
+.page-nav a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.page-nav .label { font-size: 12px; color: var(--text-light); display: block; margin-bottom: 4px; }
+.page-nav a:hover .label { color: rgba(255,255,255,0.8); }
+footer {
+  text-align: center; padding: 40px 32px 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-light); font-size: 13px;
+}
+footer a { color: var(--primary); }
+@media print {
+  .navbar, .page-nav, footer { display: none; }
+  body { padding: 0; }
+  .container { max-width: 100%; margin: 0; padding: 0; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar"><a href="index.html" class="navbar-brand">中国现存传统民居图鉴</a><ul class="navbar-links"><li><a href="index.html">首页</a></li><li><a href="01-dikengyuan.html">地坑院</a></li><li><a href="02-tulou.html" class="active">土楼</a></li><li><a href="03-siheyuan.html">四合院</a></li><li><a href="04-huipai.html">徽派</a></li><li><a href="05-yikeyin.html">一颗印</a></li><li><a href="06-diaojiaolou.html">吊脚楼</a></li><li><a href="07-weilongwu.html">围龙屋</a></li><li><a href="08-ayiwang.html">阿以旺</a></li></ul></nav>
+<div class="container"><article>
+<p>承启楼全景</p>
+<h2 id="_1">现存实例</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>关键数据</th>
+<th>特色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>承启楼</td>
+<td>圆楼</td>
+<td>直径 62m，72 房间，1709 年</td>
+<td>"土楼王"，四环相套，世界最大圆形土楼</td>
+</tr>
+<tr>
+<td>和贵楼</td>
+<td>方楼</td>
+<td>高 21.5m，5 层</td>
+<td>沼泽地松木打桩奇迹，最高方形土楼</td>
+</tr>
+<tr>
+<td>二宜楼</td>
+<td>双环圆楼</td>
+<td>单体最大</td>
+<td>八卦防火墙布局，单元式</td>
+</tr>
+<tr>
+<td>庄上大楼</td>
+<td>方楼</td>
+<td>34650㎡</td>
+<td>世界最大方楼，<strong>楼内有山</strong></td>
+</tr>
+<tr>
+<td>振成楼</td>
+<td>圆楼</td>
+<td>八卦布局</td>
+<td>"乌纱帽"造型，2014 春晚取景地</td>
+</tr>
+<tr>
+<td>道韵楼</td>
+<td>八角楼</td>
+<td>周长 328m</td>
+<td>"八防"设计（防盗、防火、防洪等）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>2008 年 7 月，福建土楼正式列入<strong>世界文化遗产名录</strong>。</p>
+</blockquote>
+<h2 id="_2">夯土奇迹</h2>
+<p>土楼外墙厚度达 <strong>1.5–3 米</strong>，是建筑史上的夯土工艺巅峰：</p>
+<ul>
+<li><strong>材料配方</strong>：红壤土 + 糯米 + 红糖 + 蛋清 + 竹条</li>
+<li><strong>竹条作用</strong>：类似现代钢筋，提供抗拉强度，防止土墙开裂</li>
+<li><strong>施工工艺</strong>：分层夹板夯实，每层约 30cm，等待干缩 10% 后再叠加下一层</li>
+<li><strong>墙体强度</strong>：建成后可经历数百年风雨而不塌</li>
+</ul>
+<pre><code>材料层示意：
+┌──────────────────────┐
+│  夯土层（红壤+糯米+红糖+蛋清） │
+├──────────────────────┤
+│  竹条拉结网（双向 @30cm）    │
+├──────────────────────┤
+│  夹板模板（木枋固定）        │
+└──────────────────────┘
+</code></pre>
+<h2 id="_3">防御设计</h2>
+<p>客家土楼是<strong>集居式防御工事</strong>，一套组合拳让土匪望而却步：</p>
+<ol>
+<li><strong>外墙无窗</strong>：一、二层只有内宽外窄的<strong>射孔</strong>，三层以上才开小窗</li>
+<li><strong>唯一厚门</strong>：木门包铁皮，门顶设<strong>防火水槽</strong>，敌人浇油烧门时水自动灭火</li>
+<li><strong>顶层望楼</strong>：可瞭望数十里</li>
+<li><strong>环通走廊</strong>：逐层退守，敌人攻入外层还能撤至内层</li>
+<li><strong>水井 + 粮仓</strong>：可封闭坚守数月</li>
+</ol>
+<h2 id="vs">圆形 vs 方形</h2>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>圆形</th>
+<th>方形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相同夯土量的围合面积</td>
+<td>更大（周长/面积比最优）</td>
+<td>较小</td>
+</tr>
+<tr>
+<td>抗外力分散</td>
+<td>均匀分散到整个环</td>
+<td>四角应力集中</td>
+</tr>
+<tr>
+<td>射界</td>
+<td>360° 无死角</td>
+<td>有射击盲区</td>
+</tr>
+<tr>
+<td>风水寓意</td>
+<td>天（圆）</td>
+<td>地（方）</td>
+</tr>
+<tr>
+<td>内部采光</td>
+<td>均匀</td>
+<td>角落较暗</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">结构力学</h2>
+<blockquote>
+<p>土墙<strong>抗压</strong> + 木架<strong>抗拉</strong> = 类似现代钢筋混凝土的组合体系</p>
+</blockquote>
+<p>2008 年汶川 7.0 级地震，福建土楼<strong>安然无恙</strong>，再次验证了这套体系的抗震性能。土楼的木构架并非钉死，而是采用燕尾榫、龙凤榫等活络榫卯，地震时可微动耗能而不溃散。</p>
+<h2 id="_5">延伸阅读</h2>
+<ul>
+<li>黄汉民.《福建土楼》. 中国建筑工业出版社.</li>
+<li>何晓静.《福建土楼营造技艺》. 福建美术出版社.</li>
+<li>联合国教科文组织. <em>Fujian Tulou: UNESCO World Heritage</em>.</li>
+</ul>
+<h2 id="_6">相关页面</h2>
+<ul>
+<li><a href="/">← 返回首页</a></li>
+<li><a href="/pages/dikengyuan/">上一页：地坑院</a></li>
+<li><a href="/pages/siheyuan/">下一页：北京四合院</a></li>
+</ul>
+</article><div class="page-nav"><a href="01-dikengyuan.html"><span class="label">← 上一页</span>地坑院</a><a href="03-siheyuan.html" style="text-align:right"><span class="label">下一页 →</span>四合院</a></div></div>
+<footer><p>Ronald G. Knapp《China's Traditional Rural Architecture》+ 2024–2026 实地资料联网采集 · AI 生成</p></footer>
+</body></html>
